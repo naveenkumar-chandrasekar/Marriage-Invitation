@@ -14,15 +14,15 @@ export default function Hero() {
       <FloralBranch className="pointer-events-none absolute top-6 left-4 h-24 w-40 -scale-x-100 text-violet-400 sm:top-10 sm:left-10 sm:h-32 sm:w-52" />
       <FloralBranch className="pointer-events-none absolute right-4 bottom-6 h-24 w-40 rotate-180 text-emerald-400 sm:right-10 sm:bottom-10 sm:h-32 sm:w-52" />
 
-      <p className="text-2xl italic tracking-[0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+      <p className="font-display text-2xl tracking-[0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
         N &amp; K
       </p>
       <p className="rounded-full border border-violet-200 bg-white/60 px-5 py-1.5 text-sm uppercase tracking-[0.4em] text-violet-500 backdrop-blur">
         We&apos;re Getting Married
       </p>
-      <h1 className="text-5xl font-semibold leading-tight text-stone-800 sm:text-7xl">
+      <h1 className="font-display text-5xl leading-tight text-stone-800 sm:text-7xl">
         {couple.person1.name}
-        <span className="mx-4 italic bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+        <span className="mx-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           &amp;
         </span>
         {couple.person2.name}

@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-display text-stone-800">
+    <div className="font-sans text-stone-800">
       <Hero />
       <Events />
       <Footer />

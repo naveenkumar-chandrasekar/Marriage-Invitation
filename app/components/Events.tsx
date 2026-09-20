@@ -32,7 +32,7 @@ export default function Events() {
         <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-emerald-500">
           Save the Date
         </p>
-        <h2 className="text-center text-3xl font-semibold bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+        <h2 className="font-display text-center text-3xl bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           Events
         </h2>
         <FloralDivider className="mx-auto mb-12 h-6 w-48 text-emerald-400" />
@@ -56,7 +56,7 @@ export default function Events() {
                     </span>
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <h3 className="text-2xl font-semibold text-stone-800">
+                        <h3 className="font-display text-2xl text-stone-800">
                           {event.title}
                         </h3>
                         <span
