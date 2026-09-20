@@ -6,7 +6,8 @@ const accents = [
     frame: "from-violet-300 via-fuchsia-200 to-violet-300",
     badge: "from-violet-400 to-violet-300",
     pill: "bg-violet-50 text-violet-600",
-    row: "border-violet-100",
+    dash: "border-violet-200",
+    pin: "bg-violet-500",
     time: "text-violet-500",
     link: "border-violet-300 text-violet-600 hover:bg-violet-50",
     watermark: "text-violet-200",
@@ -15,7 +16,8 @@ const accents = [
     frame: "from-emerald-300 via-teal-200 to-emerald-300",
     badge: "from-emerald-400 to-emerald-300",
     pill: "bg-emerald-50 text-emerald-600",
-    row: "border-emerald-100",
+    dash: "border-emerald-200",
+    pin: "bg-emerald-500",
     time: "text-emerald-500",
     link: "border-emerald-300 text-emerald-600 hover:bg-emerald-50",
     watermark: "text-emerald-200",
@@ -69,34 +71,49 @@ export default function Events() {
                     </div>
                   </div>
 
-                  <div className="relative mt-6 flex flex-col gap-3">
-                    {event.locations.map((location) => (
-                      <div
-                        key={location.label}
-                        className={`flex flex-wrap items-center justify-between gap-4 rounded-2xl border bg-stone-50/60 px-5 py-4 ${accent.row}`}
-                      >
-                        <div>
-                          <span
-                            className={`text-xs font-semibold uppercase tracking-wide ${accent.time}`}
-                          >
-                            {location.label}
-                          </span>
-                          <p className="mt-0.5 font-semibold text-stone-800">
-                            {location.name}
-                          </p>
-                          <p className="text-sm text-stone-500">{location.address}</p>
-                          <p className={`mt-1 text-sm font-medium ${accent.time}`}>
-                            {location.time}
-                          </p>
-                        </div>
-                        <a
-                          href={location.mapUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${accent.link}`}
+                  <div className="relative mt-6 flex flex-col">
+                    {event.locations.map((location, locationIndex) => (
+                      <div key={location.label}>
+                        {locationIndex > 0 && (
+                          <div className="flex justify-start pl-[27px]">
+                            <div className={`h-5 w-0 border-l-2 border-dashed ${accent.dash}`} />
+                          </div>
+                        )}
+                        <div
+                          className={`group flex flex-wrap items-center gap-4 rounded-2xl border-2 border-dashed bg-stone-50/60 px-5 py-4 transition-colors hover:border-solid hover:bg-white ${accent.dash}`}
                         >
-                          📍 View Map
-                        </a>
+                          <span
+                            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm text-white shadow-sm ${accent.pin}`}
+                          >
+                            📍
+                          </span>
+                          <div className="flex-1">
+                            <span
+                              className={`text-xs font-semibold uppercase tracking-wide ${accent.time}`}
+                            >
+                              {location.label}
+                            </span>
+                            <p className="font-display text-lg text-stone-800">
+                              {location.name}
+                            </p>
+                            <p className="text-sm text-stone-500">{location.address}</p>
+                          </div>
+                          <div className="flex shrink-0 flex-col items-end gap-2">
+                            <span
+                              className={`rounded-full px-3 py-1 text-xs font-medium ${accent.pill}`}
+                            >
+                              🕐 {location.time}
+                            </span>
+                            <a
+                              href={location.mapUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${accent.link}`}
+                            >
+                              View Map &rarr;
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
