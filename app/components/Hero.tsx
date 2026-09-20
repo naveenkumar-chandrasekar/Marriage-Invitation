@@ -7,6 +7,7 @@ export default function Hero() {
       id="top"
       className="flex min-h-[90vh] flex-col items-center justify-center gap-8 bg-gradient-to-b from-rose-100 via-rose-50 to-rose-50 px-6 py-24 text-center"
     >
+      <p className="text-2xl tracking-[0.3em] text-rose-400">N &amp; K</p>
       <p className="text-sm uppercase tracking-[0.4em] text-rose-400">
         We&apos;re Getting Married
       </p>

@@ -1,4 +1,3 @@
-import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Couple from "./components/Couple";
 import Story from "./components/Story";
@@ -10,7 +9,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className="font-serif text-stone-800">
-      <Nav />
       <Hero />
       <Couple />
       <Story />
