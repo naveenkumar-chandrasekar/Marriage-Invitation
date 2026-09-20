@@ -20,10 +20,10 @@ export default function Hero() {
       <p className="text-lg text-stone-600">{weddingDateLabel}</p>
       <Countdown targetISO={weddingDateISO} />
       <a
-        href="#rsvp"
+        href="#events"
         className="mt-4 rounded-full bg-rose-400 px-8 py-3 text-sm font-medium uppercase tracking-widest text-white shadow-sm transition-colors hover:bg-rose-500"
       >
-        RSVP Now
+        View Events
       </a>
     </section>
   );
