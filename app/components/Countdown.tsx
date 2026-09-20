@@ -23,17 +23,20 @@ export default function Countdown({ targetISO }: { targetISO: string }) {
   }, [targetISO]);
 
   const units = [
-    { label: "Days", value: timeLeft?.days },
-    { label: "Hours", value: timeLeft?.hours },
-    { label: "Minutes", value: timeLeft?.minutes },
-    { label: "Seconds", value: timeLeft?.seconds },
+    { label: "Days", value: timeLeft?.days, accent: "text-violet-500" },
+    { label: "Hours", value: timeLeft?.hours, accent: "text-emerald-500" },
+    { label: "Minutes", value: timeLeft?.minutes, accent: "text-violet-500" },
+    { label: "Seconds", value: timeLeft?.seconds, accent: "text-emerald-500" },
   ];
 
   return (
-    <div className="flex gap-4 sm:gap-8">
+    <div className="flex gap-3 sm:gap-6">
       {units.map((unit) => (
-        <div key={unit.label} className="flex flex-col items-center">
-          <span className="text-3xl font-semibold text-rose-500 sm:text-4xl">
+        <div
+          key={unit.label}
+          className="flex w-16 flex-col items-center gap-1 rounded-2xl bg-white/70 py-3 shadow-sm backdrop-blur sm:w-20"
+        >
+          <span className={`text-3xl font-semibold sm:text-4xl ${unit.accent}`}>
             {unit.value !== undefined ? String(unit.value).padStart(2, "0") : "--"}
           </span>
           <span className="text-xs uppercase tracking-widest text-stone-500">
