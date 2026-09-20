@@ -1,4 +1,4 @@
-import { FloralDivider } from "./Floral";
+import { FloralBranch, FloralDivider } from "./Floral";
 import { events } from "@/lib/wedding-data";
 
 const accents = [
@@ -9,6 +9,7 @@ const accents = [
     row: "border-violet-100",
     time: "text-violet-500",
     link: "border-violet-300 text-violet-600 hover:bg-violet-50",
+    watermark: "text-violet-200",
   },
   {
     frame: "from-emerald-300 via-teal-200 to-emerald-300",
@@ -17,6 +18,7 @@ const accents = [
     row: "border-emerald-100",
     time: "text-emerald-500",
     link: "border-emerald-300 text-emerald-600 hover:bg-emerald-50",
+    watermark: "text-emerald-200",
   },
 ];
 
@@ -42,8 +44,11 @@ export default function Events() {
                 key={event.title}
                 className={`rounded-[2rem] bg-gradient-to-br p-[2px] shadow-md transition-transform hover:-translate-y-1 hover:shadow-xl ${accent.frame}`}
               >
-                <div className="rounded-[calc(2rem-2px)] bg-white p-8">
-                  <div className="flex items-start gap-4">
+                <div className="relative overflow-hidden rounded-[calc(2rem-2px)] bg-white p-8">
+                  <FloralBranch
+                    className={`pointer-events-none absolute -top-4 -right-6 h-20 w-32 rotate-90 opacity-60 ${accent.watermark}`}
+                  />
+                  <div className="relative flex items-start gap-4">
                     <span
                       className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-3xl shadow-inner ${accent.badge}`}
                     >
@@ -64,7 +69,7 @@ export default function Events() {
                     </div>
                   </div>
 
-                  <div className="mt-6 flex flex-col gap-3">
+                  <div className="relative mt-6 flex flex-col gap-3">
                     {event.locations.map((location) => (
                       <div
                         key={location.label}
