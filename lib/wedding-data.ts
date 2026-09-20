@@ -15,7 +15,13 @@ export const events = [
     description:
       "The formal start of our forever — join us as our families come together to bless this union with the exchange of rings.",
     date: "Sunday, 13 December 2026",
-    locations: [{ label: "Venue", mapUrl: "https://maps.app.goo.gl/gYSocyAjzzFe6EwF6" }],
+    locations: [
+      {
+        label: "Venue",
+        time: "10:00 AM – 1:00 PM",
+        mapUrl: "https://maps.app.goo.gl/gYSocyAjzzFe6EwF6",
+      },
+    ],
   },
   {
     title: "Marriage",
@@ -24,8 +30,16 @@ export const events = [
       "Our sacred wedding ceremony, with rituals at the temple followed by celebrations at the venue. Your presence would mean the world to us.",
     date: "Friday, 12 March 2027",
     locations: [
-      { label: "Temple", mapUrl: "https://maps.app.goo.gl/WnJQ8dQ53ReLbtot6" },
-      { label: "Venue", mapUrl: "https://maps.app.goo.gl/JwXqNrBmF38A1mnMA" },
+      {
+        label: "Temple",
+        time: "5:00 AM – 7:00 AM",
+        mapUrl: "https://maps.app.goo.gl/WnJQ8dQ53ReLbtot6",
+      },
+      {
+        label: "Venue",
+        time: "7:00 AM – 9:00 AM",
+        mapUrl: "https://maps.app.goo.gl/JwXqNrBmF38A1mnMA",
+      },
     ],
   },
   {
@@ -34,6 +48,12 @@ export const events = [
     description:
       "An evening of food, music, and celebration as we begin our new chapter together — come raise a toast with us.",
     date: "Sunday, 14 March 2027",
-    locations: [{ label: "Venue", mapUrl: "https://maps.app.goo.gl/SsdK92nG7mRcgKaWA" }],
+    locations: [
+      {
+        label: "Venue",
+        time: "11:00 AM – 3:00 PM",
+        mapUrl: "https://maps.app.goo.gl/SsdK92nG7mRcgKaWA",
+      },
+    ],
   },
 ];
