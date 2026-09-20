@@ -1,67 +1,30 @@
 export const couple = {
-  bride: {
-    name: "Bride Name",
-    about: "Daughter of Mr. Father Name & Mrs. Mother Name",
-  },
-  groom: {
-    name: "Groom Name",
-    about: "Son of Mr. Father Name & Mrs. Mother Name",
-  },
+  person1: { name: "Naveenkumar C" },
+  person2: { name: "Keerthiga T" },
 };
 
-// ISO string, read by the countdown — update when the real date is set.
-export const weddingDateISO = "2027-02-14T10:30:00";
+// ISO string, read by the countdown — the wedding ceremony date.
+export const weddingDateISO = "2027-03-12T00:00:00";
 
-export const weddingDateLabel = "Sunday, 14 February 2027";
-
-export const story = [
-  {
-    year: "2022",
-    title: "How We Met",
-    text: "Placeholder story of how the two of you first met — swap in the real one.",
-  },
-  {
-    year: "2024",
-    title: "The Proposal",
-    text: "Placeholder story of the proposal moment — swap in the real one.",
-  },
-  {
-    year: "2027",
-    title: "The Wedding",
-    text: "And now, we're inviting you to celebrate the next chapter with us.",
-  },
-];
+export const weddingDateLabel = "Friday, 12 March 2027";
 
 export const events = [
   {
     title: "Engagement",
-    date: "13 February 2027",
-    time: "6:00 PM",
-    venue: "Placeholder Banquet Hall, City",
+    date: "Sunday, 13 December 2026",
+    locations: [{ label: "Venue", mapUrl: "https://maps.app.goo.gl/gYSocyAjzzFe6EwF6" }],
   },
   {
-    title: "Wedding Ceremony",
-    date: "14 February 2027",
-    time: "10:30 AM",
-    venue: "Placeholder Temple / Venue, City",
+    title: "Marriage",
+    date: "Friday, 12 March 2027",
+    locations: [
+      { label: "Temple", mapUrl: "https://maps.app.goo.gl/WnJQ8dQ53ReLbtot6" },
+      { label: "Venue", mapUrl: "https://maps.app.goo.gl/JwXqNrBmF38A1mnMA" },
+    ],
   },
   {
     title: "Reception",
-    date: "14 February 2027",
-    time: "7:00 PM",
-    venue: "Placeholder Convention Center, City",
-  },
-];
-
-export const venues = [
-  {
-    name: "Placeholder Temple / Venue",
-    address: "123 Placeholder Street, Sample City, State 000001",
-    mapUrl: "https://maps.google.com",
-  },
-  {
-    name: "Placeholder Convention Center",
-    address: "456 Sample Road, Sample City, State 000002",
-    mapUrl: "https://maps.google.com",
+    date: "Sunday, 14 March 2027",
+    locations: [{ label: "Venue", mapUrl: "https://maps.app.goo.gl/SsdK92nG7mRcgKaWA" }],
   },
 ];

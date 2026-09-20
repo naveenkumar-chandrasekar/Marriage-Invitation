@@ -11,15 +11,24 @@ export default function Events() {
           {events.map((event) => (
             <div
               key={event.title}
-              className="flex flex-col justify-between gap-2 rounded-2xl bg-white p-6 shadow-sm sm:flex-row sm:items-center"
+              className="flex flex-col justify-between gap-4 rounded-2xl bg-white p-6 shadow-sm sm:flex-row sm:items-center"
             >
               <div>
                 <h3 className="text-lg font-semibold text-stone-800">{event.title}</h3>
-                <p className="text-stone-600">{event.venue}</p>
+                <p className="text-stone-600">{event.date}</p>
               </div>
-              <div className="text-left text-stone-600 sm:text-right">
-                <p>{event.date}</p>
-                <p>{event.time}</p>
+              <div className="flex flex-wrap gap-3 sm:justify-end">
+                {event.locations.map((location) => (
+                  <a
+                    key={location.label}
+                    href={location.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-rose-300 px-4 py-2 text-sm font-medium text-rose-500 transition-colors hover:bg-rose-100"
+                  >
+                    {location.label} &rarr;
+                  </a>
+                ))}
               </div>
             </div>
           ))}

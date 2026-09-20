@@ -4,11 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-white py-12 text-center">
       <p className="text-xl text-rose-400">
-        {couple.bride.name} &amp; {couple.groom.name}
+        {couple.person1.name} &amp; {couple.person2.name}
       </p>
-      <p className="mt-2 text-sm text-stone-400">
-        Placeholder content &mdash; details to be updated soon.
-      </p>
+      <p className="mt-2 text-sm text-stone-400">We can&apos;t wait to celebrate with you.</p>
     </footer>
   );
 }

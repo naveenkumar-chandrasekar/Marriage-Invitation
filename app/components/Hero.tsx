@@ -12,9 +12,9 @@ export default function Hero() {
         We&apos;re Getting Married
       </p>
       <h1 className="text-5xl font-semibold leading-tight text-stone-800 sm:text-7xl">
-        {couple.bride.name}
+        {couple.person1.name}
         <span className="mx-4 text-rose-400">&amp;</span>
-        {couple.groom.name}
+        {couple.person2.name}
       </h1>
       <div className="h-px w-24 bg-rose-300" />
       <p className="text-lg text-stone-600">{weddingDateLabel}</p>
