@@ -22,19 +22,11 @@ const accents = [
   },
 ];
 
-const timeline = events.flatMap((event, eventIndex) =>
-  event.locations.map((location, locationIndex) => ({
-    key: `${event.title}-${location.label}`,
-    eventTitle: event.title,
-    icon: event.icon,
-    date: event.date,
-    description: event.description,
-    isFirstOfEvent: locationIndex === 0,
-    hasMultipleLocations: event.locations.length > 1,
-    accent: accents[eventIndex % accents.length],
-    ...location,
-  }))
-);
+const timeline = events.map((event, eventIndex) => ({
+  key: event.title,
+  ...event,
+  accent: accents[eventIndex % accents.length],
+}));
 
 export default function Events() {
   return (
@@ -73,38 +65,46 @@ export default function Events() {
                 >
                   <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="font-display text-xl text-stone-800 lg:text-2xl">
-                      {item.eventTitle}
-                      {item.hasMultipleLocations && (
-                        <span className="ml-2 text-base text-stone-400">
-                          &middot; {item.label}
-                        </span>
-                      )}
+                      {item.title}
                     </h3>
                     <span className={`text-xs font-medium uppercase tracking-wide ${item.accent.text}`}>
                       {item.date}
                     </span>
                   </div>
-                  {item.isFirstOfEvent && (
-                    <p className="mb-3 text-sm text-stone-500 lg:text-base">
-                      {item.description}
-                    </p>
-                  )}
+                  <p className="mb-3 text-sm text-stone-500 lg:text-base">
+                    {item.description}
+                  </p>
 
-                  <p className={`mt-2 text-sm font-semibold lg:text-base ${item.accent.text}`}>
-                    {item.time}
-                  </p>
-                  <p className="font-display text-lg text-stone-800 lg:text-xl">
-                    {item.name}
-                  </p>
-                  <p className="text-sm text-stone-500 lg:text-base">{item.address}</p>
-                  <a
-                    href={item.mapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`mt-1 inline-block text-sm font-medium underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
-                  >
-                    View Map &rarr;
-                  </a>
+                  <div className="flex flex-col divide-y divide-black/5">
+                    {item.locations.map((location) => (
+                      <div key={location.label} className="py-3 first:pt-0 last:pb-0">
+                        {item.locations.length > 1 && (
+                          <p
+                            className={`text-xs font-semibold uppercase tracking-wide ${item.accent.text}`}
+                          >
+                            {location.label}
+                          </p>
+                        )}
+                        <p className={`text-sm font-semibold lg:text-base ${item.accent.text}`}>
+                          {location.time}
+                        </p>
+                        <p className="font-display text-lg text-stone-800 lg:text-xl">
+                          {location.name}
+                        </p>
+                        <p className="text-sm text-stone-500 lg:text-base">
+                          {location.address}
+                        </p>
+                        <a
+                          href={location.mapUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`mt-1 inline-block text-sm font-medium underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
+                        >
+                          View Map &rarr;
+                        </a>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
