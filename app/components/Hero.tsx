@@ -30,12 +30,6 @@ export default function Hero() {
       <FloralDivider className="h-6 w-48 text-violet-400" />
       <p className="text-lg text-stone-600">{weddingDateLabel}</p>
       <Countdown targetISO={weddingDateISO} />
-      <a
-        href="#events"
-        className="mt-4 rounded-full bg-gradient-to-r from-violet-500 to-emerald-500 px-8 py-3 text-sm font-medium uppercase tracking-widest text-white shadow-md shadow-violet-200 transition-transform hover:scale-105"
-      >
-        View Events
-      </a>
 
       <svg
         className="pointer-events-none absolute bottom-0 left-0 w-full text-emerald-50"
