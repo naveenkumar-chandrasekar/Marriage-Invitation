@@ -75,33 +75,49 @@ export default function Events() {
                     {item.description}
                   </p>
 
-                  <div className="flex flex-col divide-y divide-black/5">
+                  <div className="flex flex-col gap-3">
                     {item.locations.map((location) => (
-                      <div key={location.label} className="py-3 first:pt-0 last:pb-0">
-                        {item.locations.length > 1 && (
-                          <p
-                            className={`text-xs font-semibold uppercase tracking-wide ${item.accent.text}`}
+                      <div
+                        key={location.label}
+                        className="flex flex-col gap-3 rounded-xl bg-white/70 p-4 sm:flex-row sm:items-start sm:justify-between"
+                      >
+                        <div className="flex items-start gap-3">
+                          <span
+                            className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
-                            {location.label}
-                          </p>
-                        )}
-                        <p className={`text-sm font-semibold lg:text-base ${item.accent.text}`}>
-                          {location.time}
-                        </p>
-                        <p className="font-display text-lg text-stone-800 lg:text-xl">
-                          {location.name}
-                        </p>
-                        <p className="text-sm text-stone-500 lg:text-base">
-                          {location.address}
-                        </p>
-                        <a
-                          href={location.mapUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`mt-1 inline-block text-sm font-medium underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
-                        >
-                          View Map &rarr;
-                        </a>
+                            &#128205;
+                          </span>
+                          <div>
+                            {item.locations.length > 1 && (
+                              <p
+                                className={`text-xs font-semibold uppercase tracking-wide ${item.accent.text}`}
+                              >
+                                {location.label}
+                              </p>
+                            )}
+                            <p className="font-display text-lg text-stone-800 lg:text-xl">
+                              {location.name}
+                            </p>
+                            <p className="text-sm text-stone-500 lg:text-base">
+                              {location.address}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-end gap-3 pl-11 sm:shrink-0 sm:flex-col sm:items-end sm:gap-2 sm:pl-0">
+                          <span
+                            className={`rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap lg:text-sm ${item.accent.bg} ${item.accent.text}`}
+                          >
+                            {location.time}
+                          </span>
+                          <a
+                            href={location.mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`text-sm font-medium underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
+                          >
+                            View Map &rarr;
+                          </a>
+                        </div>
                       </div>
                     ))}
                   </div>
