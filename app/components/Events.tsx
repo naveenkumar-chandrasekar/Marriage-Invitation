@@ -38,40 +38,40 @@ export default function Events() {
           Events
         </h2>
         <FloralDivider className="mx-auto mb-12 h-6 w-48 text-emerald-400" />
-        <div className="flex flex-col gap-8">
+        <div className="relative flex flex-col gap-10">
+          <div className="pointer-events-none absolute top-6 bottom-6 left-6 w-0.5 -translate-x-1/2 bg-gradient-to-b from-violet-300 via-fuchsia-200 to-emerald-300 sm:left-8" />
           {events.map((event, index) => {
             const accent = accents[index % accents.length];
             return (
-              <div
-                key={event.title}
-                className={`rounded-[2rem] bg-gradient-to-br p-[2px] shadow-md transition-transform hover:-translate-y-1 hover:shadow-xl ${accent.frame}`}
-              >
-                <div className="relative overflow-hidden rounded-[calc(2rem-2px)] bg-white p-8">
-                  <FloralBranch
-                    className={`pointer-events-none absolute -top-4 -right-6 h-20 w-32 rotate-90 opacity-60 ${accent.watermark}`}
-                  />
-                  <div className="relative flex items-start gap-4">
-                    <span
-                      className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-3xl shadow-inner ${accent.badge}`}
-                    >
-                      {event.icon}
-                    </span>
-                    <div className="flex-1">
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <h3 className="font-display text-2xl text-stone-800">
-                          {event.title}
-                        </h3>
-                        <span
-                          className={`rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide ${accent.pill}`}
-                        >
-                          {event.date}
-                        </span>
-                      </div>
-                      <p className="mt-3 text-stone-600">{event.description}</p>
-                    </div>
-                  </div>
+              <div key={event.title} className="relative flex gap-3 sm:gap-5">
+                <div className="flex w-12 shrink-0 justify-center sm:w-16">
+                  <span
+                    className={`relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-2xl shadow-md sm:h-16 sm:w-16 sm:text-3xl ${accent.badge}`}
+                  >
+                    {event.icon}
+                  </span>
+                </div>
 
-                  <div className="relative mt-6 flex flex-col">
+                <div
+                  className={`flex-1 rounded-[2rem] bg-gradient-to-br p-[2px] shadow-md transition-transform hover:-translate-y-1 hover:shadow-xl ${accent.frame}`}
+                >
+                  <div className="relative overflow-hidden rounded-[calc(2rem-2px)] bg-white p-6 sm:p-8">
+                    <FloralBranch
+                      className={`pointer-events-none absolute -top-4 -right-6 h-20 w-32 rotate-90 opacity-60 ${accent.watermark}`}
+                    />
+                    <div className="relative flex flex-wrap items-center justify-between gap-2">
+                      <h3 className="font-display text-2xl text-stone-800">
+                        {event.title}
+                      </h3>
+                      <span
+                        className={`rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide ${accent.pill}`}
+                      >
+                        {event.date}
+                      </span>
+                    </div>
+                    <p className="relative mt-3 text-stone-600">{event.description}</p>
+
+                    <div className="relative mt-6 flex flex-col">
                     {event.locations.map((location, locationIndex) => (
                       <div key={location.label}>
                         {locationIndex > 0 && (
@@ -116,6 +116,7 @@ export default function Events() {
                         </div>
                       </div>
                     ))}
+                    </div>
                   </div>
                 </div>
               </div>
