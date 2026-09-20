@@ -18,6 +18,8 @@ export const events = [
     locations: [
       {
         label: "Venue",
+        name: "DSP Thirumana Mahal",
+        address: "Deviyakurichi, Attur, Tamil Nadu 636112",
         time: "10:00 AM – 1:00 PM",
         mapUrl: "https://maps.app.goo.gl/gYSocyAjzzFe6EwF6",
       },
@@ -32,11 +34,15 @@ export const events = [
     locations: [
       {
         label: "Temple",
+        name: "Arulmigu Thiru Ardhanareeswarar Temple",
+        address: "Arthanareeswarar Hill Temple Road, Tiruchengode, Tamil Nadu 637205",
         time: "5:00 AM – 7:00 AM",
         mapUrl: "https://maps.app.goo.gl/WnJQ8dQ53ReLbtot6",
       },
       {
         label: "Venue",
+        name: "SKV Mahal",
+        address: "Tiruchengode, Tamil Nadu 637205",
         time: "7:00 AM – 9:00 AM",
         mapUrl: "https://maps.app.goo.gl/JwXqNrBmF38A1mnMA",
       },
@@ -51,6 +57,8 @@ export const events = [
     locations: [
       {
         label: "Venue",
+        name: "Komarasamy Gounder Nallammal Marriage A/C Hall",
+        address: "Salem - Chennai Highway, Mammudi, Tamil Nadu 636112",
         time: "11:00 AM – 3:00 PM",
         mapUrl: "https://maps.app.goo.gl/SsdK92nG7mRcgKaWA",
       },

@@ -66,11 +66,19 @@ export default function Events() {
                     {event.locations.map((location) => (
                       <div
                         key={location.label}
-                        className={`flex flex-wrap items-center justify-between gap-3 rounded-2xl border bg-stone-50/60 px-5 py-3 ${accent.row}`}
+                        className={`flex flex-wrap items-center justify-between gap-4 rounded-2xl border bg-stone-50/60 px-5 py-4 ${accent.row}`}
                       >
                         <div>
-                          <p className="font-medium text-stone-800">{location.label}</p>
-                          <p className={`text-sm font-medium ${accent.time}`}>
+                          <span
+                            className={`text-xs font-semibold uppercase tracking-wide ${accent.time}`}
+                          >
+                            {location.label}
+                          </span>
+                          <p className="mt-0.5 font-semibold text-stone-800">
+                            {location.name}
+                          </p>
+                          <p className="text-sm text-stone-500">{location.address}</p>
+                          <p className={`mt-1 text-sm font-medium ${accent.time}`}>
                             {location.time}
                           </p>
                         </div>
@@ -78,7 +86,7 @@ export default function Events() {
                           href={location.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${accent.link}`}
+                          className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${accent.link}`}
                         >
                           📍 View Map
                         </a>
