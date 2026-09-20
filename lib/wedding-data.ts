@@ -52,7 +52,7 @@ export const events = [
     title: "Reception",
     icon: "🎉",
     description:
-      "An evening of food, music, and celebration as we begin our new chapter together — come raise a toast with us.",
+      "An afternoon of food, music, and celebration as we begin our new chapter together — come raise a toast with us.",
     date: "Sunday, 14 March 2027",
     locations: [
       {

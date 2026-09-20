@@ -43,6 +43,14 @@ export function FloralBranch({ className = "" }: { className?: string }) {
   );
 }
 
+export function Heart({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 21s-7.5-4.6-10.2-9.1C.3 9.1 1 5.6 4 4.2c2.2-1 4.6-.2 6 1.7 1.4-1.9 3.8-2.7 6-1.7 3 1.4 3.7 4.9 2.2 7.7C19.5 16.4 12 21 12 21z" />
+    </svg>
+  );
+}
+
 export function FloralDivider({ className = "" }: { className?: string }) {
   return (
     <svg
