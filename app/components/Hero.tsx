@@ -10,15 +10,15 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-violet-300/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-emerald-300/40 blur-3xl" />
 
-      <p className="text-2xl tracking-[0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+      <p className="text-2xl italic tracking-[0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
         N &amp; K
       </p>
-      <p className="text-sm uppercase tracking-[0.4em] text-violet-500">
+      <p className="rounded-full border border-violet-200 bg-white/60 px-5 py-1.5 text-sm uppercase tracking-[0.4em] text-violet-500 backdrop-blur">
         We&apos;re Getting Married
       </p>
       <h1 className="text-5xl font-semibold leading-tight text-stone-800 sm:text-7xl">
         {couple.person1.name}
-        <span className="mx-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+        <span className="mx-4 italic bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           &amp;
         </span>
         {couple.person2.name}
@@ -32,6 +32,18 @@ export default function Hero() {
       >
         View Events
       </a>
+
+      <svg
+        className="pointer-events-none absolute bottom-0 left-0 w-full text-emerald-50"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          fill="currentColor"
+          d="M0,32 C240,80 480,80 720,48 C960,16 1200,16 1440,48 L1440,80 L0,80 Z"
+        />
+      </svg>
     </section>
   );
 }
