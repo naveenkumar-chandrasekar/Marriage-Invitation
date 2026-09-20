@@ -52,7 +52,7 @@ export default function Events() {
           <div className="flex flex-col gap-6 lg:gap-8">
             {timeline.map((item) => (
               <div key={item.key} className="relative flex gap-4 sm:gap-5 lg:gap-6">
-                <div className="relative z-10 flex w-10 shrink-0 justify-center sm:w-12 lg:w-14">
+                <div className="relative z-10 flex w-10 shrink-0 justify-center pt-5 sm:w-12 sm:pt-6 lg:w-14 lg:pt-8">
                   <span
                     className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-2 ring-inset sm:h-12 sm:w-12 sm:text-2xl lg:h-14 lg:w-14 lg:text-3xl ${item.accent.ring}`}
                   >
