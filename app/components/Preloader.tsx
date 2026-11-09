@@ -5,8 +5,8 @@ import { Heart } from "./Floral";
 
 // Minimum time the loader stays up so the ring animation can finish,
 // measured from navigation start rather than from hydration.
-const MIN_VISIBLE_MS = 1600;
-const FADE_MS = 700;
+const MIN_VISIBLE_MS = 2200;
+const FADE_MS = 800;
 
 const hearts = [
   { left: "18%", delay: "0s", size: "h-3 w-3", color: "text-violet-300" },
@@ -98,7 +98,7 @@ export default function Preloader() {
           strokeWidth="2.2"
           pathLength={1}
         />
-        <g className="preloader-pop text-emerald-500" style={{ animationDelay: "1.1s" }}>
+        <g className="preloader-pop text-emerald-500" style={{ animationDelay: "1.4s" }}>
           <path
             d="M66 21 L69.5 16.5 H76.5 L80 21 L73 28.5 Z"
             stroke="currentColor"
@@ -109,7 +109,7 @@ export default function Preloader() {
         </g>
         <path
           className="preloader-twinkle text-fuchsia-400"
-          style={{ animationDelay: "1.3s" }}
+          style={{ animationDelay: "1.6s" }}
           d="M93 12 Q93.6 15.4 97 16 Q93.6 16.6 93 20 Q92.4 16.6 89 16 Q92.4 15.4 93 12 Z"
           fill="currentColor"
         />
@@ -117,13 +117,13 @@ export default function Preloader() {
 
       <p
         className="preloader-rise font-script mt-4 px-2 text-5xl [word-spacing:0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent"
-        style={{ animationDelay: "0.8s" }}
+        style={{ animationDelay: "1s" }}
       >
         N &amp; K
       </p>
       <p
         className="preloader-rise font-display mt-2 text-lg italic text-stone-500"
-        style={{ animationDelay: "1.1s" }}
+        style={{ animationDelay: "1.3s" }}
       >
         Two hearts, one journey
       </p>
