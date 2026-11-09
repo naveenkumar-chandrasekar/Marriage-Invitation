@@ -1,5 +1,5 @@
 import { FloralBranch, FloralDivider } from "./Floral";
-import { eventIcons, PinIcon, type EventIconName } from "./EventIcons";
+import { eventIcons, MapIcon, PinIcon, type EventIconName } from "./EventIcons";
 import { events } from "@/lib/wedding-data";
 
 const accents = [
@@ -7,19 +7,16 @@ const accents = [
     bg: "bg-violet-50",
     ring: "ring-violet-200",
     text: "text-violet-600",
-    link: "text-violet-600",
   },
   {
     bg: "bg-emerald-50",
     ring: "ring-emerald-200",
     text: "text-emerald-600",
-    link: "text-emerald-600",
   },
   {
     bg: "bg-amber-50",
     ring: "ring-amber-200",
     text: "text-amber-600",
-    link: "text-amber-600",
   },
 ];
 
@@ -109,7 +106,7 @@ export default function Events() {
                             </p>
                           </div>
                         </div>
-                        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pl-10 sm:shrink-0 sm:flex-col sm:items-end sm:gap-2 sm:pl-0">
+                        <div className="flex flex-wrap items-center gap-3 pl-10 sm:shrink-0 sm:flex-nowrap sm:pl-0">
                           <span
                             className={`rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap lg:text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
@@ -119,9 +116,11 @@ export default function Events() {
                             href={location.mapUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`text-sm font-medium whitespace-nowrap underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
+                            aria-label={`Open ${location.name} in Google Maps`}
+                            title="View on map"
+                            className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-inset transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 lg:h-10 lg:w-10 ${item.accent.ring} ${item.accent.text}`}
                           >
-                            View Map &rarr;
+                            <MapIcon className="h-5 w-5" />
                           </a>
                         </div>
                       </div>

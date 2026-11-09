@@ -79,6 +79,15 @@ export function PinIcon({ className = "" }: IconProps) {
   );
 }
 
+export function MapIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" {...stroke}>
+      <path d="M3.5 6.5 L9 4.5 L15 6.5 L20.5 4.5 V17.5 L15 19.5 L9 17.5 L3.5 19.5 Z" />
+      <path d="M9 4.5 V17.5 M15 6.5 V19.5" opacity="0.6" />
+    </svg>
+  );
+}
+
 export const eventIcons = {
   rings: RingsIcon,
   temple: TempleIcon,
