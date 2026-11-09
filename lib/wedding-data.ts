@@ -11,7 +11,7 @@ export const weddingDateLabel = "Friday, 12 March 2027";
 export const events = [
   {
     title: "Engagement",
-    icon: "💍",
+    icon: "rings",
     description:
       "The formal start of our forever — join us as our families come together to bless this union with the exchange of rings.",
     date: "Sunday, 13 December 2026",
@@ -27,7 +27,7 @@ export const events = [
   },
   {
     title: "Marriage",
-    icon: "🛕",
+    icon: "temple",
     description:
       "Our sacred wedding ceremony, with rituals at the temple followed by celebrations at the venue. Your presence would mean the world to us.",
     date: "Friday, 12 March 2027",
@@ -50,7 +50,7 @@ export const events = [
   },
   {
     title: "Reception",
-    icon: "🎉",
+    icon: "toast",
     description:
       "An afternoon of food, music, and celebration as we begin our new chapter together — come raise a toast with us.",
     date: "Sunday, 14 March 2027",

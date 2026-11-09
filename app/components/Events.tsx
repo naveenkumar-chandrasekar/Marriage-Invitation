@@ -1,4 +1,5 @@
 import { FloralBranch, FloralDivider } from "./Floral";
+import { eventIcons, PinIcon, type EventIconName } from "./EventIcons";
 import { events } from "@/lib/wedding-data";
 
 const accents = [
@@ -26,6 +27,7 @@ const timeline = events.map((event, eventIndex) => ({
   key: event.title,
   ...event,
   accent: accents[eventIndex % accents.length],
+  Icon: eventIcons[event.icon as EventIconName],
 }));
 
 export default function Events() {
@@ -54,9 +56,13 @@ export default function Events() {
               <div key={item.key} className="relative flex gap-3 sm:gap-5 lg:gap-6">
                 <div className="relative z-10 flex w-10 shrink-0 justify-center pt-5 sm:w-12 sm:pt-6 lg:w-14 lg:pt-8">
                   <span
-                    className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-2 ring-inset sm:h-12 sm:w-12 sm:text-2xl lg:h-14 lg:w-14 lg:text-3xl ${item.accent.ring}`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-full bg-white p-1 shadow-sm ring-1 ring-inset sm:h-12 sm:w-12 lg:h-14 lg:w-14 ${item.accent.ring}`}
                   >
-                    {item.icon}
+                    <span
+                      className={`flex h-full w-full items-center justify-center rounded-full ${item.accent.bg} ${item.accent.text}`}
+                    >
+                      <item.Icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                    </span>
                   </span>
                 </div>
 
@@ -85,7 +91,7 @@ export default function Events() {
                           <span
                             className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
-                            &#128205;
+                            <PinIcon className="h-4 w-4" />
                           </span>
                           <div className="min-w-0">
                             {item.locations.length > 1 && (
