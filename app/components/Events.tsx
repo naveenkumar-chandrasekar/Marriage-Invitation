@@ -37,7 +37,7 @@ export default function Events() {
       <FloralBranch className="pointer-events-none absolute top-4 left-0 h-24 w-40 text-violet-300/60 sm:h-32 sm:w-52 lg:h-40 lg:w-64" />
       <FloralBranch className="pointer-events-none absolute top-4 right-0 h-24 w-40 -scale-x-100 text-emerald-300/60 sm:h-32 sm:w-52 lg:h-40 lg:w-64" />
 
-      <div className="relative mx-auto max-w-xl px-6 sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+      <div className="relative mx-auto max-w-xl px-4 sm:max-w-2xl sm:px-6 lg:max-w-4xl xl:max-w-5xl">
         <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-emerald-500">
           Save the Date
         </p>
@@ -51,7 +51,7 @@ export default function Events() {
 
           <div className="flex flex-col gap-6 lg:gap-8">
             {timeline.map((item) => (
-              <div key={item.key} className="relative flex gap-4 sm:gap-5 lg:gap-6">
+              <div key={item.key} className="relative flex gap-3 sm:gap-5 lg:gap-6">
                 <div className="relative z-10 flex w-10 shrink-0 justify-center pt-5 sm:w-12 sm:pt-6 lg:w-14 lg:pt-8">
                   <span
                     className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl shadow-sm ring-2 ring-inset sm:h-12 sm:w-12 sm:text-2xl lg:h-14 lg:w-14 lg:text-3xl ${item.accent.ring}`}
@@ -61,9 +61,9 @@ export default function Events() {
                 </div>
 
                 <div
-                  className={`flex-1 rounded-2xl p-5 sm:p-6 lg:p-8 ${item.accent.bg}`}
+                  className={`min-w-0 flex-1 rounded-2xl p-4 sm:p-6 lg:p-8 ${item.accent.bg}`}
                 >
-                  <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+                  <div className="mb-1 flex flex-col gap-0.5 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-2">
                     <h3 className="font-display text-xl text-stone-800 lg:text-2xl">
                       {item.title}
                     </h3>
@@ -79,15 +79,15 @@ export default function Events() {
                     {item.locations.map((location) => (
                       <div
                         key={location.label}
-                        className="flex flex-col gap-3 rounded-xl bg-white/70 p-4 sm:flex-row sm:items-start sm:justify-between"
+                        className="flex flex-col gap-3 rounded-xl bg-white/70 p-3 sm:flex-row sm:p-4 sm:items-start sm:justify-between"
                       >
-                        <div className="flex items-start gap-3">
+                        <div className="flex min-w-0 items-start gap-2 sm:gap-3">
                           <span
                             className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
                             &#128205;
                           </span>
-                          <div>
+                          <div className="min-w-0">
                             {item.locations.length > 1 && (
                               <p
                                 className={`text-xs font-semibold uppercase tracking-wide ${item.accent.text}`}
@@ -95,7 +95,7 @@ export default function Events() {
                                 {location.label}
                               </p>
                             )}
-                            <p className="font-display text-lg text-stone-800 lg:text-xl">
+                            <p className="font-display text-lg break-words text-stone-800 lg:text-xl">
                               {location.name}
                             </p>
                             <p className="text-sm text-stone-500 lg:text-base">
@@ -103,7 +103,7 @@ export default function Events() {
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center justify-end gap-3 pl-11 sm:shrink-0 sm:flex-col sm:items-end sm:gap-2 sm:pl-0">
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pl-10 sm:shrink-0 sm:flex-col sm:items-end sm:gap-2 sm:pl-0">
                           <span
                             className={`rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap lg:text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
@@ -113,7 +113,7 @@ export default function Events() {
                             href={location.mapUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`text-sm font-medium underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
+                            className={`text-sm font-medium whitespace-nowrap underline decoration-dotted underline-offset-4 lg:text-base ${item.accent.link}`}
                           >
                             View Map &rarr;
                           </a>

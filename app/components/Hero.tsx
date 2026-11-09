@@ -20,12 +20,12 @@ export default function Hero() {
       <p className="rounded-full border border-violet-200 bg-white/60 px-5 py-1.5 text-sm uppercase tracking-[0.4em] text-violet-500 backdrop-blur">
         We&apos;re Getting Married
       </p>
-      <h1 className="font-display text-5xl leading-tight text-stone-800 sm:text-7xl">
-        {couple.person1.name}
-        <span className="mx-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+      <h1 className="font-display text-4xl leading-tight text-stone-800 sm:text-7xl">
+        <span className="inline-block whitespace-nowrap">{couple.person1.name}</span>
+        <span className="mx-3 sm:mx-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           &amp;
         </span>
-        {couple.person2.name}
+        <span className="inline-block whitespace-nowrap">{couple.person2.name}</span>
       </h1>
       <FloralDivider className="h-6 w-48 text-violet-400" />
       <p className="text-lg text-stone-600">{weddingDateLabel}</p>
