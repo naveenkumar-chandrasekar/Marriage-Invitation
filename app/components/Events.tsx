@@ -61,7 +61,7 @@ export default function Events() {
                     <span
                       className={`flex h-full w-full items-center justify-center rounded-full ${item.accent.bg} ${item.accent.text}`}
                     >
-                      <item.Icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      <item.Icon className="h-4/5 w-4/5" />
                     </span>
                   </span>
                 </div>
@@ -91,7 +91,7 @@ export default function Events() {
                           <span
                             className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
-                            <PinIcon className="h-4 w-4" />
+                            <PinIcon className="h-5 w-5" />
                           </span>
                           <div className="min-w-0">
                             {item.locations.length > 1 && (
