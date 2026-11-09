@@ -31,10 +31,10 @@ export default function Events() {
   return (
     <section
       id="events"
-      className="relative overflow-hidden bg-gradient-to-b from-emerald-50 via-white to-violet-50 py-20"
+      className="relative overflow-hidden bg-gradient-to-b from-emerald-50 via-white to-violet-50 pt-8 pb-16 sm:pt-10 sm:pb-20"
     >
-      <FloralBranch className="pointer-events-none absolute top-4 left-0 h-24 w-40 text-violet-300/60 sm:h-32 sm:w-52 lg:h-40 lg:w-64" />
-      <FloralBranch className="pointer-events-none absolute top-4 right-0 h-24 w-40 -scale-x-100 text-emerald-300/60 sm:h-32 sm:w-52 lg:h-40 lg:w-64" />
+      <FloralBranch className="pointer-events-none absolute top-0 left-0 h-16 w-28 text-violet-300/60 sm:h-32 sm:w-52 lg:h-40 lg:w-64" />
+      <FloralBranch className="pointer-events-none absolute top-0 right-0 h-16 w-28 -scale-x-100 text-emerald-300/60 sm:h-32 sm:w-52 lg:h-40 lg:w-64" />
 
       <div className="relative mx-auto max-w-xl px-4 sm:max-w-2xl sm:px-6 lg:max-w-4xl xl:max-w-5xl">
         <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-emerald-500">
@@ -43,7 +43,7 @@ export default function Events() {
         <h2 className="font-display text-center text-4xl font-medium sm:text-5xl bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           Events
         </h2>
-        <FloralDivider className="mx-auto mt-2 mb-14 h-6 w-48 text-emerald-400" />
+        <FloralDivider className="mx-auto mt-2 mb-10 h-6 w-48 text-emerald-400 sm:mb-12" />
 
         <div className="relative">
           <div className="absolute top-2 bottom-2 left-5 w-px border-l-2 border-dotted border-violet-300 sm:left-6 lg:left-7" />
