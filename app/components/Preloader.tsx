@@ -116,7 +116,7 @@ export default function Preloader() {
       </svg>
 
       <p
-        className="preloader-rise font-script mt-4 px-2 text-5xl [word-spacing:0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent"
+        className="preloader-rise script-clip font-script mt-4 text-5xl [word-spacing:0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent"
         style={{ animationDelay: "1s" }}
       >
         N &amp; K
