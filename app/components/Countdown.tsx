@@ -36,10 +36,10 @@ export default function Countdown({ targetISO }: { targetISO: string }) {
           key={unit.label}
           className="flex w-16 flex-col items-center gap-1 rounded-2xl bg-white/70 py-3 shadow-sm backdrop-blur sm:w-20"
         >
-          <span className={`font-display text-3xl sm:text-4xl ${unit.accent}`}>
+          <span className={`font-display text-4xl font-medium leading-none sm:text-5xl ${unit.accent}`}>
             {unit.value !== undefined ? String(unit.value).padStart(2, "0") : "--"}
           </span>
-          <span className="text-xs uppercase tracking-widest text-stone-500">
+          <span className="text-[10px] uppercase tracking-[0.15em] text-stone-500 sm:text-xs sm:tracking-widest">
             {unit.label}
           </span>
         </div>

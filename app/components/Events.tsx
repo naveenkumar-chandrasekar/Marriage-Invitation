@@ -43,7 +43,7 @@ export default function Events() {
         <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-emerald-500">
           Save the Date
         </p>
-        <h2 className="font-display text-center text-3xl bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+        <h2 className="font-display text-center text-4xl font-medium sm:text-5xl bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           Events
         </h2>
         <FloralDivider className="mx-auto mt-2 mb-14 h-6 w-48 text-emerald-400" />
@@ -70,7 +70,7 @@ export default function Events() {
                   className={`min-w-0 flex-1 rounded-2xl p-4 sm:p-6 lg:p-8 ${item.accent.bg}`}
                 >
                   <div className="mb-1 flex flex-col gap-0.5 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-2">
-                    <h3 className="font-display text-xl text-stone-800 lg:text-2xl">
+                    <h3 className="font-display text-2xl font-semibold text-stone-800 lg:text-3xl">
                       {item.title}
                     </h3>
                     <span className={`text-xs font-medium uppercase tracking-wide ${item.accent.text}`}>
@@ -101,7 +101,7 @@ export default function Events() {
                                 {location.label}
                               </p>
                             )}
-                            <p className="font-display text-lg break-words text-stone-800 lg:text-xl">
+                            <p className="font-display text-xl font-semibold break-words text-stone-800 lg:text-2xl">
                               {location.name}
                             </p>
                             <p className="text-sm text-stone-500 lg:text-base">

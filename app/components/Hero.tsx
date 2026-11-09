@@ -14,21 +14,21 @@ export default function Hero() {
       <FloralBranch className="pointer-events-none absolute top-6 left-4 h-24 w-40 -scale-x-100 text-violet-400 sm:top-10 sm:left-10 sm:h-32 sm:w-52" />
       <FloralBranch className="pointer-events-none absolute right-4 bottom-6 h-24 w-40 rotate-180 text-emerald-400 sm:right-10 sm:bottom-10 sm:h-32 sm:w-52" />
 
-      <p className="font-display text-2xl tracking-[0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+      <p className="font-script px-2 text-4xl [word-spacing:0.3em] bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
         N &amp; K
       </p>
-      <p className="rounded-full border border-violet-200 bg-white/60 px-5 py-1.5 text-sm uppercase tracking-[0.4em] text-violet-500 backdrop-blur">
+      <p className="rounded-full border border-violet-200 bg-white/60 px-5 py-1.5 text-xs uppercase tracking-[0.3em] text-violet-500 sm:text-sm sm:tracking-[0.4em] backdrop-blur">
         We&apos;re Getting Married
       </p>
-      <h1 className="font-display text-4xl leading-tight text-stone-800 sm:text-7xl">
+      <h1 className="font-script text-5xl leading-snug text-stone-800 sm:text-8xl">
         <span className="inline-block whitespace-nowrap">{couple.person1.name}</span>
-        <span className="mx-3 sm:mx-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
+        <span className="mx-3 px-1 sm:mx-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
           &amp;
         </span>
         <span className="inline-block whitespace-nowrap">{couple.person2.name}</span>
       </h1>
       <FloralDivider className="h-6 w-48 text-violet-400" />
-      <p className="text-lg text-stone-600">{weddingDateLabel}</p>
+      <p className="font-display text-xl italic text-stone-600 sm:text-2xl">{weddingDateLabel}</p>
       <Countdown targetISO={weddingDateISO} />
 
       <svg

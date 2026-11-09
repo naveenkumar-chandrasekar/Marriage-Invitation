@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Marcellus, Jost } from "next/font/google";
+import { Cormorant_Garamond, Great_Vibes, Jost } from "next/font/google";
 import "./globals.css";
 
 const jost = Jost({
@@ -7,8 +7,15 @@ const jost = Jost({
   subsets: ["latin"],
 });
 
-const marcellus = Marcellus({
-  variable: "--font-marcellus",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
   weight: "400",
   subsets: ["latin"],
 });
@@ -29,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${marcellus.variable} h-full antialiased`}
+      className={`${jost.variable} ${cormorant.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
