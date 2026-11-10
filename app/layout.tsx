@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Great_Vibes, Jost } from "next/font/google";
+import { Josefin_Sans, Jost, Sacramento } from "next/font/google";
 import "./globals.css";
 
 const jost = Jost({
@@ -7,15 +7,15 @@ const jost = Jost({
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  weight: ["400", "500", "600"],
+const josefin = Josefin_Sans({
+  variable: "--font-josefin",
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
+const sacramento = Sacramento({
+  variable: "--font-sacramento",
   weight: "400",
   subsets: ["latin"],
 });
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${cormorant.variable} ${greatVibes.variable} h-full antialiased`}
+      className={`${jost.variable} ${josefin.variable} ${sacramento.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

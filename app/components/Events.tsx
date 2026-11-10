@@ -98,7 +98,7 @@ export default function Events() {
                                 {location.label}
                               </p>
                             )}
-                            <p className="font-display text-xl font-semibold break-words text-stone-800 lg:text-2xl">
+                            <p className="font-display text-lg font-semibold break-words text-stone-800 sm:text-xl lg:text-2xl">
                               {location.name}
                             </p>
                             <p className="text-sm text-stone-500 lg:text-base">
