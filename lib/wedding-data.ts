@@ -1,6 +1,18 @@
 export const couple = {
-  person1: { name: "Naveenkumar C" },
-  person2: { name: "Keerthiga T" },
+  person1: {
+    name: "Naveenkumar C",
+    role: "The Groom",
+    relation: "Son of",
+    father: "Mr. Chandrasekar K",
+    mother: "Mrs. Parameswari C",
+  },
+  person2: {
+    name: "Keerthiga T",
+    role: "The Bride",
+    relation: "Daughter of",
+    father: "Mr. Thangaraje P",
+    mother: "Mrs. Vijayalakshmi T",
+  },
 };
 
 // ISO string, read by the countdown — the wedding ceremony date.
