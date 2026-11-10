@@ -52,7 +52,7 @@ export function Heart({
 }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} style={style} aria-hidden="true">
-      <path d="M12 21s-7.5-4.6-10.2-9.1C.3 9.1 1 5.6 4 4.2c2.2-1 4.6-.2 6 1.7 1.4-1.9 3.8-2.7 6-1.7 3 1.4 3.7 4.9 2.2 7.7C19.5 16.4 12 21 12 21z" />
+      <path d="M12 20.4C12 20.4 3 14.5 3 8.6 3 5.9 5.1 3.8 7.7 3.8c1.8 0 3.4 1 4.3 2.6.9-1.6 2.5-2.6 4.3-2.6 2.6 0 4.7 2.1 4.7 4.8 0 5.9-9 11.8-9 11.8z" />
     </svg>
   );
 }

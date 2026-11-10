@@ -51,7 +51,7 @@ export default function Events() {
           <div className="flex flex-col gap-6 lg:gap-8">
             {timeline.map((item) => (
               <div key={item.key} className="relative flex gap-3 sm:gap-5 lg:gap-6">
-                <div className="relative z-10 flex w-10 shrink-0 justify-center pt-5 sm:w-12 sm:pt-6 lg:w-14 lg:pt-8">
+                <div className="relative z-10 flex w-10 shrink-0 justify-center pt-[9px] sm:w-12 sm:pt-[13px] lg:w-14 lg:pt-[19px]">
                   <span
                     className={`flex h-10 w-10 items-center justify-center rounded-full bg-white p-1 shadow-sm ring-1 ring-inset sm:h-12 sm:w-12 lg:h-14 lg:w-14 ${item.accent.ring}`}
                   >
@@ -82,11 +82,11 @@ export default function Events() {
                     {item.locations.map((location) => (
                       <div
                         key={location.label}
-                        className="flex flex-col gap-3 rounded-xl bg-white/70 p-3 sm:flex-row sm:p-4 sm:items-start sm:justify-between"
+                        className="flex flex-col gap-3 rounded-xl bg-white/70 p-3 sm:flex-row sm:items-center sm:justify-between sm:p-4"
                       >
                         <div className="flex min-w-0 items-start gap-2 sm:gap-3">
                           <span
-                            className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${item.accent.bg} ${item.accent.text}`}
+                            className={`${item.locations.length > 1 ? "mt-3" : "-mt-1"} flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm ${item.accent.bg} ${item.accent.text}`}
                           >
                             <PinIcon className="h-5 w-5" />
                           </span>

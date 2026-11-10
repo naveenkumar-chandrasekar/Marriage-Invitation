@@ -9,6 +9,8 @@ const people = [
       soft: "bg-violet-50",
       text: "text-violet-600",
       divider: "text-violet-300",
+      // Sacramento's N inks right of its advance box; pull it back to centre.
+      initial: "-translate-x-[3px]",
     },
   },
   {
@@ -18,6 +20,7 @@ const people = [
       soft: "bg-emerald-50",
       text: "text-emerald-600",
       divider: "text-emerald-300",
+      initial: "",
     },
   },
 ];
@@ -54,9 +57,9 @@ export default function Couple() {
                   className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white p-1 shadow-sm ring-1 ring-inset ${person.accent.ring}`}
                 >
                   <span
-                    className={`font-script flex h-full w-full items-center justify-center rounded-full pt-1 text-4xl ${person.accent.soft} ${person.accent.text}`}
+                    className={`font-script flex h-full w-full items-center justify-center rounded-full text-4xl ${person.accent.soft} ${person.accent.text}`}
                   >
-                    {person.name.charAt(0)}
+                    <span className={`translate-y-1.5 ${person.accent.initial}`}>{person.name.charAt(0)}</span>
                   </span>
                 </span>
 
@@ -74,12 +77,10 @@ export default function Couple() {
                 <p className="font-display text-lg italic text-stone-500">
                   {person.relation}
                 </p>
-                <p className="font-display mt-1 text-xl font-semibold text-stone-700 lg:text-2xl">
+                <p className="font-display mt-1 text-xl leading-snug font-semibold text-stone-700 lg:text-2xl">
                   <span className="block">{person.father}</span>
-                  <span className="block">
-                    <span className={`font-normal italic ${person.accent.text}`}>&amp;</span>{" "}
-                    {person.mother}
-                  </span>
+                  <span className={`block text-base font-normal ${person.accent.text}`}>&amp;</span>
+                  <span className="block">{person.mother}</span>
                 </p>
               </article>
             </div>
