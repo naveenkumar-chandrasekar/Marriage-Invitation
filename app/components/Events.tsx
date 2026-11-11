@@ -9,6 +9,11 @@ const accents = [
     text: "text-violet-600",
   },
   {
+    bg: "bg-rose-50",
+    ring: "ring-rose-200",
+    text: "text-rose-600",
+  },
+  {
     bg: "bg-emerald-50",
     ring: "ring-emerald-200",
     text: "text-emerald-600",

@@ -38,6 +38,22 @@ export const events = [
     ],
   },
   {
+    title: "Engagement",
+    icon: "rings",
+    description:
+      "On the eve of the wedding, our families gather at the bride's home for an intimate ceremony to exchange rings and blessings.",
+    date: "Thursday, 11 March 2027",
+    locations: [
+      {
+        label: "Venue",
+        name: "Bride's Home",
+        address: "Vasanthapuram, Manivilundhan, Tamil Nadu 636112",
+        time: "8:00 AM – 11:00 AM",
+        mapUrl: "https://maps.app.goo.gl/eTNEVVizW4rsymJ69",
+      },
+    ],
+  },
+  {
     title: "Marriage",
     icon: "temple",
     description:
