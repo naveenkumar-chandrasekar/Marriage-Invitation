@@ -25,7 +25,7 @@ export const events = [
     title: "Betrothal",
     icon: "thamboolam",
     description:
-      "The formal start of our forever — join us as our families come together to bless this union with the exchange of rings.",
+      "The formal start of our forever — join us as our families come together to bless this union with the exchange of thamboolam.",
     date: "Sunday, 13 December 2026",
     locations: [
       {
