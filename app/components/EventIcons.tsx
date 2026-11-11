@@ -11,13 +11,20 @@ const stroke = {
   strokeLinejoin: "round" as const,
 };
 
-export function RingsIcon({ className = "" }: IconProps) {
+// Thamboolam: plate with a coconut and betel leaves, exchanged at the betrothal.
+export function ThamboolamIcon({ className = "" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden="true" {...stroke}>
-      <circle cx="9" cy="15" r="5.5" />
-      <circle cx="15" cy="15" r="5.5" />
-      <path d="M13 6.2 L14.2 4.6 H15.8 L17 6.2 L15 8.8 Z" />
-      <path d="M13 6.2 H17" opacity="0.6" />
+      <g transform="translate(0 -1)">
+      <ellipse cx="12" cy="16.4" rx="9" ry="1.9" />
+      <path d="M4.6 17.6 C6.8 20.4 17.2 20.4 19.4 17.6" />
+      <circle cx="12" cy="11.4" r="3.3" />
+      <path d="M12 8.1 C11.6 6.8 10.6 6 9.4 5.8 M12 8.1 C12.4 6.8 13.4 6 14.6 5.8 M12 8.1 V6" />
+      <path d="M8.4 14.7 C6.4 14.6 4.3 13.4 3.5 11.2 C5.7 10.5 7.9 11.6 8.9 13.5" />
+      <path d="M8.4 14.6 L5.1 12" opacity="0.6" />
+      <path d="M15.6 14.7 C17.6 14.6 19.7 13.4 20.5 11.2 C18.3 10.5 16.1 11.6 15.1 13.5" />
+      <path d="M15.6 14.6 L18.9 12" opacity="0.6" />
+      </g>
     </svg>
   );
 }
@@ -89,7 +96,7 @@ export function MapIcon({ className = "" }: IconProps) {
 }
 
 export const eventIcons = {
-  rings: RingsIcon,
+  thamboolam: ThamboolamIcon,
   temple: TempleIcon,
   toast: ToastIcon,
 };

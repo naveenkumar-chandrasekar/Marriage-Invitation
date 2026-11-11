@@ -22,8 +22,8 @@ export const weddingDateLabel = "Friday, 12 March 2027";
 
 export const events = [
   {
-    title: "Engagement",
-    icon: "rings",
+    title: "Betrothal",
+    icon: "thamboolam",
     description:
       "The formal start of our forever — join us as our families come together to bless this union with the exchange of rings.",
     date: "Sunday, 13 December 2026",
